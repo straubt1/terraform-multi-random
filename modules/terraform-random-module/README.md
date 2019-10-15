@@ -1,0 +1,1 @@
+This is the README for the terraform-random-module. It has an input variable of `string_length` and an output of `random_string`.
