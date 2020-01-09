@@ -28,3 +28,5 @@ output "bubbles_random" {
 output "blossom_random" {
   value = "Blossom Remote Value thru Bubbles- ${data.terraform_remote_state.bubbles.outputs.blossom_random}"
 }
+
+variable "tf_hostname" {}
