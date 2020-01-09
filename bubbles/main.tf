@@ -8,8 +8,8 @@ resource "random_id" "random" {
 
 data "terraform_remote_state" "blossom" {
   backend = "remote"
-  hostname = var.tf_hostname
   config = {
+    hostname = var.tf_hostname
     organization = "clang_test"
     workspaces = {
       name = "blossom"
