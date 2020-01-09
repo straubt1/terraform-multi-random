@@ -8,6 +8,7 @@ resource "random_id" "random" {
 
 data "terraform_remote_state" "blossom" {
   backend = "remote"
+  hostname = var.tf_hostname
   config = {
     organization = "clang_test"
     workspaces = {
@@ -23,3 +24,5 @@ output "random" {
 output "blossom_random" {
   value = "Blossom Remote Value - ${data.terraform_remote_state.blossom.random}"
 }
+
+variable "tf_hostname" {}
