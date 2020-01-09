@@ -21,5 +21,5 @@ output "random" {
 }
 
 output "blossom_random" {
-  value = "Blossom Remote Value - ${data.terraform_remote_state.blossom.random}
+  value = "Blossom Remote Value - ${data.terraform_remote_state.blossom.random}"
 }
