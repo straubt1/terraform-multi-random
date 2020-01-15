@@ -9,7 +9,7 @@ resource "random_id" "random" {
 data "terraform_remote_state" "bubbles" {
   backend = "remote"
   config = {
-    organization = "clang_test"
+    organization = var.tf_org
     hostname = var.tf_hostname
     workspaces = {
       name = "bubbles"
@@ -30,3 +30,4 @@ output "blossom_random" {
 }
 
 variable "tf_hostname" {}
+variable "tf_org" {}
